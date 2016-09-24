@@ -22,6 +22,7 @@
 #include <core/key.hpp>
 #include <core/led.hpp>
 #include <core/virtual_input.hpp>
+#include <core/command_executor.hpp>
 
 /* constants */
 const int MAX_BUF = 8;

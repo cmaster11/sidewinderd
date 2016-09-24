@@ -9,7 +9,7 @@ LIST(APPEND SOURCE_LIST ${ROOT_SRC} ${CORE_SRC} ${VENDOR_LIST})
 
 CONFIGURE_FILE("${PROJECT_SOURCE_DIR}/etc/sidewinderd.service.in" "${CMAKE_CURRENT_BINARY_DIR}/sidewinderd.service")
 
-ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE_LIST} "${PROJECT_SOURCE_DIR}/etc/sidewinderd.conf" "${CMAKE_CURRENT_BINARY_DIR}/sidewinderd.service")
+ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE_LIST} "${PROJECT_SOURCE_DIR}/etc/sidewinderd.conf" "${CMAKE_CURRENT_BINARY_DIR}/sidewinderd.service" core/command_executor.cpp core/command_executor.hpp)
 
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} stdc++ config++ udev pthread tinyxml2)
 
